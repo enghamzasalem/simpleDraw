@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+<link rel="stylesheet" href="lib/css/signature-pad.css">
+    <!-- ionic/angularjs js -->
+	  <script src="lib/js/signature_pad.js"></script>
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+<script type="text/javascript" src="js/jquery-latest.js"></script>
+    <!-- <script type="text/javascript"> 
+      $(document).ready( function() {
+        $('#signature-pad').delay(3000).fadeOut();
+		 $('#div2').delay(3000).fadeIn();
+		 	
+			
+		var image1 = document.getElementById("newimage");
+		
+	      image1.src=signaturePad.toDataURL();
+		  
+					
+   
+			
+      });
+    </script> -->
+    <!--var sigimg=signaturePad.ToDataUrl();
+			document.getElementById("signcanvas").src=sigimg; cordova script (this will be a 404 during development) -->
+			   <script src="js/ng-cordova.min.js"></script>
+    <script src="cordova.js"></script>
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter" ng-controller="Sign">
+
+    <ion-pane>
+      <ion-header-bar class="bar-balanced" style=" border-radius: 12px;" >
+        <h1 class="title">رسمة بسيطة </h1>
+      </ion-header-bar>
+      <ion-content class="has-header padding" scroll='false'>
+	  <!-- <canvas id='signcanvas' height='180' style="border:1px solid black;width:100%"></canvas>
+	  <div class"button-bar">
+	  <center>
+	  <a class="button button-energized" ng-click="ClearCnavas()" > Clear</a>
+	  
+	   <a class="button button-balanced" ng-click="SaveCnavas()" > Save</a>
+	   </center>
+	  </div>
+	  </br>
+	  <img ng-src='{{signtureimage}}'> -->
+	     <script type='text/javascript' src="js/jquery.min.js"></script>
+	  <div  id="signature-pad" class="m-signature-pad animate-show" style=" border-radius: 12px;">
+    <div class="m-signature-pad--body">
+      <canvas></canvas>
+	 
+    </div>
+    <div class="m-signature-pad--footer">
+      <div class="description"></div>
+      <button class="button button-assertive clear"  style=" border-radius: 12px;" data-action="clear">مسح</button>
+      <button class="button button-balanced save" style=" border-radius: 12px;" data-action="save">معاينة</button>
+    </div>
+	
+  </div>
+  </br>
+ </br>
+  <div id="div2" style="display:none;" >
+  <center>
+<div style="position:absolute;top:1%;left:1%"><h3> صوور رسمتك وشاركها على #رسمة_بسيطة لتحصل على جائزة الابداع البسيط </h3></div>
+    <img id="newimage"  src=""  width="80%"  > 
+	 
+	</center>
+	<div class="bar bar-footer ">
+	 <!-- <button class="button" ng-click="shareAnywhere2('some message', null, 'http://blog.nraboy.com')">صور رسمتك وشاركها على#رسمة_ب60ث</button>  -->
+   <button class="button button-assertive" onclick="back1()" data-action="back" style=" border-radius: 12px;" >الرجوع</button>
+  <!-- <button class="button button-positive icon-left ion-social-facebook"  data-action="share1" ng-click="shareAnywhere()"  style="background: #4c66a4;border-radius: 12px;">
+          <span ng-show="!loading">Share On FaceBook</span>
+          <i ng-show="loading" class="ion-loading-b"></i>
+        </button> -->
+  
+</div>
+ </div>
+
+ 
+ 
+  <!-- <script src="lib/js/app.js"></script> -->
+	  
+	  
+	  <script >
+	  
+	  	
+	function back1(){
+		
+		 var div1 = document.getElementById("signature-pad");
+		   div1.style.display='block';
+		     var div2 = document.getElementById("div2");
+		   div2.style.display='none';
+		
+	}	
+	  </script>
+	  
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>
