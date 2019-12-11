@@ -1,7 +1,7 @@
 # simpleDraw
 
 it simple application make Draw using touch screen;
-![alt text](https://raw.githubusercontent.com/enghamzasalem/simpleDraw/master/meme.jpeg)
+![alt text](https://raw.githubusercontent.com/enghamzasalem/simpleDraw/master/meme.png)
 
 ---
 
